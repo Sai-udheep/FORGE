@@ -9,6 +9,7 @@ from app.api.v1.focus import router as focus_router
 from app.api.v1.reviews import router as reviews_router
 from app.api.v1.analytics import router as analytics_router
 from app.api.v1.integrations import router as integrations_router
+from app.api.v1.intelligence import router as intelligence_router
 
 api_router = APIRouter()
 
@@ -22,3 +23,4 @@ api_router.include_router(focus_router)
 api_router.include_router(reviews_router)
 api_router.include_router(analytics_router)
 api_router.include_router(integrations_router)
+api_router.include_router(intelligence_router)

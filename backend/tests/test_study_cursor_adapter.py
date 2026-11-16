@@ -22,8 +22,8 @@ def test_aptitude_15_minute_enforcement(db):
     adapter = StudyCursorAdapter()
     adapter.ingest_manifest(db)
 
-    # Import an aptitude topic
-    req = StudyCursorTopicImportRequest(topic_id="apt-1")
+    # Import an aptitude topic (actual ID in Study Cursor is ga-1..ga-10)
+    req = StudyCursorTopicImportRequest(topic_id="ga-1")
     task = adapter.import_topic_to_planner(db, req)
 
     # Must be strictly 15 minutes by default!

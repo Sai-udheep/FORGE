@@ -1,6 +1,6 @@
 import os
 from pathlib import Path
-from pydantic_settings import BaseSettings
+from pydantic_settings import BaseSettings, SettingsConfigDict
 from typing import List
 
 class Settings(BaseSettings):
@@ -37,8 +37,6 @@ class Settings(BaseSettings):
     LONG_BREAK_MINUTES: int = 30
     APTITUDE_DAILY_MINUTES: int = 15 # Mandatory 15-minute aptitude rule
 
-    class Config:
-        env_file = ".env"
-        extra = "ignore"
+    model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
 settings = Settings()

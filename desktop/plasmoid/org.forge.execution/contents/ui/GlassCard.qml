@@ -4,8 +4,8 @@ import QtQuick.Layouts
 Rectangle {
     id: cardRoot
     radius: 14
-    color: Qt.rgba(0.086, 0.094, 0.125, 0.72) // Translucent Obsidian Glass
-    border.color: Qt.rgba(1.0, 1.0, 1.0, 0.12)  // Specular frosted border
+    color: Qt.rgba(1.0, 1.0, 1.0, 0.07) // Frosted translucent glass inset
+    border.color: Qt.rgba(1.0, 1.0, 1.0, 0.15)  // Specular frosted border
     border.width: 1
 
     // Subtle macOS specular reflection along top edge
@@ -15,6 +15,6 @@ Rectangle {
         anchors.right: parent.right
         height: 1
         radius: cardRoot.radius
-        color: Qt.rgba(1.0, 1.0, 1.0, 0.22)
+        color: Qt.rgba(1.0, 1.0, 1.0, 0.25)
     }
 }

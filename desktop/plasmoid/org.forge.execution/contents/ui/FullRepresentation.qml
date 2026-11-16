@@ -2,15 +2,28 @@ import QtQuick
 import QtQuick.Controls as QQC2
 import QtQuick.Layouts
 import org.kde.plasma.plasmoid
+import "components"
 
-Rectangle {
+Item {
     id: fullRoot
     implicitWidth: 380
     implicitHeight: 560
-    color: Qt.rgba(0.047, 0.051, 0.063, 0.92) // Deep Obsidian Liquid Glass Canvas
-    radius: 18
-    border.color: Qt.rgba(1.0, 1.0, 1.0, 0.14)
-    border.width: 1
+
+    LiquidGlass {
+        id: glass
+        anchors.fill: parent
+        radius: 28
+        roundness: 7.0
+        refractThickness: 35
+        refractIOR: 1.7
+        refractScale: 65
+        tint: "#000000"
+        tintAlpha: 0.28
+        chromaStrength: 0.30
+        specStrength: 0.70
+        blurRadius: 6
+        fallbackOpacity: 0.50
+    }
 
     ColumnLayout {
         anchors.fill: parent
@@ -190,8 +203,8 @@ Rectangle {
                         width: taskList.width
                         height: 38
                         radius: 8
-                        color: Qt.rgba(0.12, 0.14, 0.18, 0.6)
-                        border.color: modelData.status === "completed" ? Qt.rgba(0.06, 0.71, 0.83, 0.4) : Qt.rgba(1, 1, 1, 0.08)
+                        color: Qt.rgba(1.0, 1.0, 1.0, 0.06)
+                        border.color: modelData.status === "completed" ? Qt.rgba(0.06, 0.71, 0.83, 0.4) : Qt.rgba(1, 1, 1, 0.10)
 
                         RowLayout {
                             anchors.fill: parent

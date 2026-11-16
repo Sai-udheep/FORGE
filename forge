@@ -1,0 +1,79 @@
+#!/usr/bin/env python3
+"""
+FORGE 2.0 CLI — Command-line management interface for FORGE & Study Cursor integration.
+"""
+
+import sys
+import json
+import argparse
+from pathlib import Path
+
+# Setup paths
+SCRIPT_DIR = Path(__file__).resolve().parent
+BACKEND_DIR = SCRIPT_DIR / "backend"
+sys.path.insert(0, str(BACKEND_DIR))
+
+def cmd_status(args):
+    import httpx
+    try:
+        resp = httpx.get("http://127.0.0.1:8000/api/v1/health", timeout=2.0)
+        status_resp = httpx.get("http://127.0.0.1:8000/api/v1/status", timeout=2.0)
+        if resp.status_code == 200:
+            print("🟢 FORGE 2.0 Backend: ONLINE (http://127.0.0.1:8000)")
+            data = status_resp.json()
+            print(f"📋 Today's Tasks: {data.get('today_tasks_completed', 0)}/{data.get('today_tasks_total', 0)} completed")
+            if data.get("has_active_focus_session"):
+                print("⚡ Active Focus Session: IN PROGRESS")
+            else:
+                print("⚪ Focus Session: IDLE")
+        else:
+            print("🟡 FORGE 2.0 Backend: Degraded")
+    except Exception:
+        print("🔴 FORGE 2.0 Backend: OFFLINE (Run './forge start' or 'systemctl --user start forge')")
+
+def cmd_start(args):
+    import subprocess
+    start_script = SCRIPT_DIR / "desktop" / "scripts" / "start_backend.sh"
+    subprocess.run([str(start_script)])
+
+def cmd_plasmoid_install(args):
+    import subprocess
+    install_script = SCRIPT_DIR / "desktop" / "scripts" / "install_plasmoid.sh"
+    subprocess.run([str(install_script)])
+
+def cmd_sync_study_cursor(args):
+    import httpx
+    try:
+        resp = httpx.post("http://127.0.0.1:8000/api/v1/integrations/study-cursor/sync", timeout=5.0)
+        if resp.status_code == 200:
+            data = resp.json()
+            print(f"✅ Study Cursor Sync Success! Ingested {data.get('total_topics_ingested')} topics.")
+        else:
+            print(f"❌ Sync failed: {resp.text}")
+    except Exception as e:
+        print(f"❌ Connection error: {e}")
+
+def main():
+    parser = argparse.ArgumentParser(description="FORGE 2.0 Personal Execution System")
+    subparsers = parser.add_subparsers(dest="command")
+
+    subparsers.add_parser("status", help="Check status of backend and today's execution")
+    subparsers.add_parser("start", help="Start the backend daemon")
+    subparsers.add_parser("sync", help="Synchronize curriculum from Study Cursor")
+    subparsers.add_parser("install-plasmoid", help="Install/upgrade KDE Plasma 6 widget")
+
+    args = parser.parse_args()
+
+    if args.command == "status":
+        cmd_status(args)
+    elif args.command == "start":
+        cmd_start(args)
+    elif args.command == "sync":
+        cmd_sync_study_cursor(args)
+    elif args.command == "install-plasmoid":
+        cmd_plasmoid_install(args)
+    else:
+        parser.print_help()
+
+if __name__ == "__main__":
+    main()

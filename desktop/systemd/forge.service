@@ -1,0 +1,14 @@
+[Unit]
+Description=FORGE 2.0 Execution System Backend Daemon
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/run/media/saiudheep/New Volume/PROJECTS/PERSONAL/FORGE/backend
+ExecStart=/run/media/saiudheep/New Volume/PROJECTS/PERSONAL/FORGE/backend/.venv/bin/uvicorn app.main:app --host 127.0.0.1 --port 8000
+Restart=always
+RestartSec=5
+Environment="PYTHONPATH=/run/media/saiudheep/New Volume/PROJECTS/PERSONAL/FORGE/backend"
+
+[Install]
+WantedBy=default.target

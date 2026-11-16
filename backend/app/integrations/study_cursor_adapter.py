@@ -48,9 +48,10 @@ class StudyCursorAdapter:
     def get_or_create_connection(self, db: Session) -> StudyCursorConnection:
         conn = db.query(StudyCursorConnection).first()
         if not conn:
+            actual_path = self.workspace_path if self.workspace_path.exists() else (settings.BASE_DIR / "app" / "data")
             conn = StudyCursorConnection(
                 name="Local Study Cursor",
-                workspace_path=str(self.workspace_path),
+                workspace_path=str(actual_path),
                 sync_mode="manifest_and_cloud" if self._supabase_url else "manifest_only",
                 supabase_url=self._supabase_url,
                 sync_status="idle"
@@ -220,10 +221,16 @@ class StudyCursorAdapter:
         for t in topics:
             tracks_summary[t.track_category] = tracks_summary.get(t.track_category, 0) + 1
 
+        has_source = (
+            self.workspace_path.exists()
+            or (settings.BASE_DIR / "app" / "data" / "seed-data.json").exists()
+            or total > 0
+        )
+
         return StudyCursorStatusResponse(
             connection_id=conn.id,
             workspace_path=str(self.workspace_path),
-            is_connected=self.workspace_path.exists(),
+            is_connected=has_source,
             sync_mode=conn.sync_mode,
             last_sync_at=conn.last_sync_at,
             sync_status=conn.sync_status,

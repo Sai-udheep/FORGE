@@ -1,19 +1,16 @@
 import QtQuick
 import QtQuick.Controls as QQC2
 import QtQuick.Layouts
-import org.kde.plasma.components as PlasmaComponents
-import org.kde.plasma.core as PlasmaCore
+import org.kde.plasma.plasmoid
 
 Rectangle {
     id: fullRoot
     implicitWidth: 380
     implicitHeight: 560
-    color: Qt.rgba(0.047, 0.051, 0.063, 0.88) // Deep Obsidian Liquid Glass Canvas
+    color: Qt.rgba(0.047, 0.051, 0.063, 0.92) // Deep Obsidian Liquid Glass Canvas
     radius: 18
     border.color: Qt.rgba(1.0, 1.0, 1.0, 0.14)
     border.width: 1
-
-    property var rootModel: plasmoid.rootItem
 
     ColumnLayout {
         anchors.fill: parent
@@ -33,7 +30,7 @@ Rectangle {
                     GradientStop { position: 0.0; color: "#FF8A48" }
                     GradientStop { position: 1.0; color: "#F74C1E" }
                 }
-                PlasmaComponents.Label {
+                QQC2.Label {
                     anchors.centerIn: parent
                     text: "⚡"
                     font.pixelSize: 13
@@ -42,13 +39,13 @@ Rectangle {
 
             ColumnLayout {
                 spacing: 0
-                PlasmaComponents.Label {
+                QQC2.Label {
                     text: "FORGE 2.0"
                     font.bold: true
                     font.pixelSize: 14
                     color: "#FFFFFF"
                 }
-                PlasmaComponents.Label {
+                QQC2.Label {
                     text: "PLAN • FOCUS • TRACK • GROW"
                     font.pixelSize: 8
                     color: Qt.rgba(1, 1, 1, 0.5)
@@ -65,10 +62,10 @@ Rectangle {
                 color: Qt.rgba(1.0, 0.42, 0.21, 0.18)
                 border.color: Qt.rgba(1.0, 0.42, 0.21, 0.35)
 
-                PlasmaComponents.Label {
+                QQC2.Label {
                     id: streakLabel
                     anchors.centerIn: parent
-                    text: "🔥 " + (rootModel ? rootModel.streakDays : "0") + "d Streak"
+                    text: "🔥 " + (root ? root.streakDays : "0") + "d Streak"
                     font.pixelSize: 10
                     font.bold: true
                     color: "#FF8A48"
@@ -78,7 +75,7 @@ Rectangle {
             // Refresh Button
             QQC2.ToolButton {
                 text: "⟳"
-                onClicked: if (rootModel) rootModel.fetchDashboard()
+                onClicked: if (root) root.fetchDashboard()
             }
         }
 
@@ -94,15 +91,15 @@ Rectangle {
 
                 RowLayout {
                     Layout.fillWidth: true
-                    PlasmaComponents.Label {
-                        text: rootModel && rootModel.isFocusActive ? "ACTIVE FOCUS SESSION" : "FOCUS TIMER"
+                    QQC2.Label {
+                        text: root && root.isFocusActive ? "ACTIVE FOCUS SESSION" : "FOCUS TIMER"
                         font.pixelSize: 9
                         font.bold: true
-                        color: rootModel && rootModel.isFocusActive ? "#FF6B35" : Qt.rgba(1, 1, 1, 0.5)
+                        color: root && root.isFocusActive ? "#FF6B35" : Qt.rgba(1, 1, 1, 0.5)
                     }
                     Item { Layout.fillWidth: true }
-                    PlasmaComponents.Label {
-                        text: rootModel ? rootModel.activeTaskTitle : "Deep Focus Sitting"
+                    QQC2.Label {
+                        text: root ? root.activeTaskTitle : "Deep Focus Sitting"
                         font.pixelSize: 10
                         color: "#8B5CF6"
                         elide: Text.ElideRight
@@ -111,13 +108,13 @@ Rectangle {
                 }
 
                 // Big Timer Display
-                PlasmaComponents.Label {
+                QQC2.Label {
                     Layout.alignment: Qt.AlignHCenter
-                    text: rootModel ? rootModel.timerString : "50:00"
+                    text: root ? root.timerString : "50:00"
                     font.pixelSize: 42
                     font.bold: true
                     font.family: "Monospace"
-                    color: rootModel && rootModel.isFocusActive ? "#FF6B35" : "#FFFFFF"
+                    color: root && root.isFocusActive ? "#FF6B35" : "#FFFFFF"
                 }
 
                 // Timer Controls
@@ -126,28 +123,28 @@ Rectangle {
                     spacing: 12
 
                     QQC2.Button {
-                        text: rootModel && rootModel.isFocusActive ? "Pause" : "Start Focus"
+                        text: root && root.isFocusActive ? "Pause" : "Start Focus"
                         highlighted: true
                         onClicked: {
-                            if (rootModel) {
-                                if (rootModel.isFocusActive) rootModel.pauseFocus();
-                                else rootModel.startFocus(50);
+                            if (root) {
+                                if (root.isFocusActive) root.pauseFocus();
+                                else root.startFocus(50);
                             }
                         }
                     }
 
                     QQC2.Button {
                         text: "Finish Sitting"
-                        enabled: rootModel && rootModel.activeFocusId !== ""
+                        enabled: root && root.activeFocusId !== ""
                         onClicked: {
-                            if (rootModel) rootModel.finishFocus();
+                            if (root) root.finishFocus();
                         }
                     }
 
                     QQC2.Button {
                         text: "15m Aptitude"
                         onClicked: {
-                            if (rootModel) rootModel.startFocus(15);
+                            if (root) root.startFocus(15);
                         }
                     }
                 }
@@ -166,15 +163,15 @@ Rectangle {
 
                 RowLayout {
                     Layout.fillWidth: true
-                    PlasmaComponents.Label {
-                        text: "TODAY'S EXECUTION (" + (rootModel ? rootModel.todayCompletedCount : 0) + "/" + (rootModel ? rootModel.todayTotalCount : 0) + ")"
+                    QQC2.Label {
+                        text: "TODAY'S EXECUTION (" + (root ? root.todayCompletedCount : 0) + "/" + (root ? root.todayTotalCount : 0) + ")"
                         font.pixelSize: 10
                         font.bold: true
                         color: Qt.rgba(1, 1, 1, 0.6)
                     }
                     Item { Layout.fillWidth: true }
-                    PlasmaComponents.Label {
-                        text: (rootModel ? rootModel.completionPct : "0") + "%"
+                    QQC2.Label {
+                        text: (root ? root.completionPct : "0") + "%"
                         font.pixelSize: 10
                         font.bold: true
                         color: "#06B6D4"
@@ -186,7 +183,7 @@ Rectangle {
                     Layout.fillWidth: true
                     Layout.fillHeight: true
                     clip: true
-                    model: rootModel ? rootModel.todayTasks : []
+                    model: root ? root.todayTasks : []
                     spacing: 6
 
                     delegate: Rectangle {
@@ -204,13 +201,13 @@ Rectangle {
                             QQC2.CheckBox {
                                 checked: modelData.status === "completed"
                                 onToggled: {
-                                    if (rootModel && modelData.id) {
-                                        rootModel.completeTask(modelData.id);
+                                    if (root && modelData.id) {
+                                        root.completeTask(modelData.id);
                                     }
                                 }
                             }
 
-                            PlasmaComponents.Label {
+                            QQC2.Label {
                                 Layout.fillWidth: true
                                 text: modelData.title
                                 font.pixelSize: 11
@@ -219,7 +216,7 @@ Rectangle {
                                 elide: Text.ElideRight
                             }
 
-                            PlasmaComponents.Label {
+                            QQC2.Label {
                                 text: (modelData.estimated_duration_minutes || 45) + "m"
                                 font.pixelSize: 9
                                 color: Qt.rgba(1, 1, 1, 0.4)
@@ -238,11 +235,11 @@ Rectangle {
                 width: 8
                 height: 8
                 radius: 4
-                color: rootModel && rootModel.studyCursorConnected ? "#10B981" : "#EF4444"
+                color: root && root.studyCursorConnected ? "#10B981" : "#EF4444"
             }
 
-            PlasmaComponents.Label {
-                text: rootModel && rootModel.studyCursorConnected ? "Study Cursor Synced (131 Topics)" : "Study Cursor Disconnected"
+            QQC2.Label {
+                text: root && root.studyCursorConnected ? "Study Cursor Synced (131 Topics)" : "Study Cursor Disconnected"
                 font.pixelSize: 9
                 color: Qt.rgba(1, 1, 1, 0.5)
             }
@@ -251,7 +248,7 @@ Rectangle {
 
             QQC2.Button {
                 text: "Import Topic"
-                onClicked: if (rootModel) rootModel.importNextTopic()
+                onClicked: if (root) root.importNextTopic()
             }
         }
     }
@@ -262,7 +259,7 @@ Rectangle {
         anchors.fill: parent
         radius: 18
         color: Qt.rgba(0, 0, 0, 0.82)
-        visible: rootModel ? rootModel.showCompletionDialog : false
+        visible: root ? root.showCompletionDialog : false
 
         GlassCard {
             anchors.centerIn: parent
@@ -274,16 +271,16 @@ Rectangle {
                 anchors.margins: 16
                 spacing: 12
 
-                PlasmaComponents.Label {
+                QQC2.Label {
                     text: "Confirm Topic Completion"
                     font.bold: true
                     font.pixelSize: 14
                     color: "#FF6B35"
                 }
 
-                PlasmaComponents.Label {
+                QQC2.Label {
                     Layout.fillWidth: true
-                    text: "You just finished a focus sitting for:\n" + (rootModel ? rootModel.pendingConfirmTopicTitle : "") + "\n\nDid you finish this topic in Study Cursor?"
+                    text: "You just finished a focus sitting for:\n" + (root ? root.pendingConfirmTopicTitle : "") + "\n\nDid you finish this topic in Study Cursor?"
                     font.pixelSize: 11
                     wrapMode: Text.Wrap
                     color: "#FFFFFF"
@@ -297,13 +294,13 @@ Rectangle {
 
                     QQC2.Button {
                         text: "No, Not Yet"
-                        onClicked: if (rootModel) rootModel.dismissCompletionDialog()
+                        onClicked: if (root) root.dismissCompletionDialog()
                     }
 
                     QQC2.Button {
                         text: "Yes, Mark Complete"
                         highlighted: true
-                        onClicked: if (rootModel) rootModel.confirmTopicDone()
+                        onClicked: if (root) root.confirmTopicDone()
                     }
                 }
             }

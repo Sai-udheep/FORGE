@@ -3,9 +3,6 @@ name: Build FORGE Android APK
 on:
   push:
     branches: [ main ]
-    paths:
-      - 'android_app/**'
-      - '.github/workflows/build-apk.yml'
   workflow_dispatch: # Allows manual trigger from GitHub UI
 
 jobs:

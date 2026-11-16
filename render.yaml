@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: forge-backend
+    env: docker
+    dockerfilePath: backend/Dockerfile
+    dockerContext: backend
+    plan: free
+    region: oregon
+    healthCheckPath: /api/v1/health
+    envVars:
+      - key: PORT
+        value: 8000
+      - key: API_SECRET_KEY
+        generateValue: true
+      - key: DATABASE_URL
+        value: sqlite:////app/forge.db

@@ -1,3 +1,4 @@
+import os
 import json
 import logging
 from datetime import datetime, timezone
@@ -24,9 +25,10 @@ class StudyCursorAdapter:
         self.workspace_path = workspace_path or settings.STUDY_CURSOR_DIR
         self.manifest_path = self.workspace_path / "seed-data.json"
         self.env_path = self.workspace_path / ".env.local"
-        self._supabase_url: Optional[str] = None
-        self._supabase_anon_key: Optional[str] = None
-        self._load_supabase_credentials()
+        self._supabase_url: Optional[str] = os.environ.get("SUPABASE_URL") or os.environ.get("VITE_SUPABASE_URL")
+        self._supabase_anon_key: Optional[str] = os.environ.get("SUPABASE_ANON_KEY") or os.environ.get("VITE_SUPABASE_ANON_KEY")
+        if not self._supabase_url:
+            self._load_supabase_credentials()
 
     def _load_supabase_credentials(self):
         """Reads Supabase URL and key from Study Cursor's .env.local if present (Read-Only)."""
@@ -60,12 +62,17 @@ class StudyCursorAdapter:
 
     def ingest_manifest(self, db: Session) -> Dict[str, Any]:
         """Ingests static curriculum data from Study Cursor's seed-data.json in read-only mode."""
-        if not self.manifest_path.exists():
-            raise FileNotFoundError(f"Study Cursor manifest not found at {self.manifest_path}")
+        target_path = self.manifest_path
+        if not target_path.exists():
+            bundled_path = settings.BASE_DIR / "app" / "data" / "seed-data.json"
+            if bundled_path.exists():
+                target_path = bundled_path
+            else:
+                raise FileNotFoundError(f"Study Cursor manifest not found at {self.manifest_path} or {bundled_path}")
 
         conn = self.get_or_create_connection(db)
         
-        with open(self.manifest_path, "r", encoding="utf-8") as f:
+        with open(target_path, "r", encoding="utf-8") as f:
             data = json.load(f)
 
         ingested_count = 0

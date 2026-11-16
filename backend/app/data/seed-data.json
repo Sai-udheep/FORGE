@@ -1,0 +1,1476 @@
+{
+  "weeklyRules": {
+    "schedule": {
+      "monday":    { "ai": true,  "sde": false },
+      "tuesday":   { "ai": true,  "sde": false },
+      "wednesday": { "ai": false, "sde": true  },
+      "thursday":  { "ai": true,  "sde": false },
+      "friday":    { "ai": true,  "sde": false },
+      "saturday":  { "ai": true,  "sde": true  },
+      "sunday":    { "ai": true,  "sde": true  }
+    },
+    "notes": "Wednesday is dedicated to SDE Prep. Saturday & Sunday SDE is a light/optional touchpoint. GATE follows the 5-Cluster Sequential Mastery Engine alongside Daily General Aptitude."
+  },
+
+  "gateMastery": {
+    "activeSubjectKey": "discreteMathematics",
+    "lastUpdated": null
+  },
+
+  "gate": {
+    "discreteMathematics": {
+      "id": "gate-discrete-mathematics",
+      "name": "GATE — Discrete Mathematics",
+      "cluster": "Cluster 1: Foundations & Problem Solving",
+      "clusterNumber": 1,
+      "weightage": "7–9 Marks",
+      "currentIndex": 0,
+      "topics": [
+        {
+          "id": "dm-1",
+          "title": "Propositional and First-Order Logic",
+          "subtopics": [
+            "Propositional logic (connectives, truth tables, tautologies, equivalences)",
+            "First-order logic (predicates, quantifiers, validity, inference rules)"
+          ],
+          "status": "pending"
+        },
+        {
+          "id": "dm-2",
+          "title": "Sets, Relations, and Functions",
+          "subtopics": [
+            "Sets and set operations, power sets, Cartesian products",
+            "Relations (reflexive, symmetric, transitive, equivalence relations, partitions)",
+            "Functions (injective, surjective, bijective, composition)"
+          ],
+          "status": "pending"
+        },
+        {
+          "id": "dm-3",
+          "title": "Partial Orders and Lattices",
+          "subtopics": [
+            "Partial orders, posets & Hasse diagrams",
+            "Lattices (bounded, distributive, complemented lattices)"
+          ],
+          "status": "pending"
+        },
+        {
+          "id": "dm-4",
+          "title": "Algebraic Structures — Monoids and Groups",
+          "subtopics": [
+            "Semigroups and monoids",
+            "Groups, subgroups, cyclic groups, abelian groups, Lagrange's theorem"
+          ],
+          "status": "pending"
+        },
+        {
+          "id": "dm-5",
+          "title": "Combinatorics",
+          "subtopics": [
+            "Counting principles, permutations, combinations, pigeonhole principle",
+            "Recurrence relations and solving linear recurrences",
+            "Generating functions and applications"
+          ],
+          "status": "pending"
+        },
+        {
+          "id": "dm-6",
+          "title": "Graph Theory — Connectivity, Matching, and Colouring",
+          "subtopics": [
+            "Graph connectivity, paths, cycles, Eulerian and Hamiltonian graphs",
+            "Cut vertices, bridges, matching and vertex/edge coverings",
+            "Graph colouring and chromatic number"
+          ],
+          "status": "pending"
+        }
+      ]
+    },
+
+    "programmingDataStructures": {
+      "id": "gate-programming-data-structures",
+      "name": "GATE — Programming & Data Structures",
+      "cluster": "Cluster 1: Foundations & Problem Solving",
+      "clusterNumber": 1,
+      "weightage": "10–13 Marks (High Weightage)",
+      "currentIndex": 0,
+      "topics": [
+        {
+          "id": "pds-1",
+          "title": "Programming in C and Recursion",
+          "subtopics": [
+            "Data types, operators, control flow & scoping rules",
+            "Pointers, pointer arithmetic & dynamic memory allocation",
+            "Functions & recursion, call stack frame execution"
+          ],
+          "status": "pending"
+        },
+        {
+          "id": "pds-2",
+          "title": "Arrays, Stacks, and Queues",
+          "subtopics": [
+            "Array representations & address mapping formulas",
+            "Stacks, infix to postfix conversion & expression evaluation",
+            "Queues, circular queues & double-ended queues (deques)"
+          ],
+          "status": "pending"
+        },
+        {
+          "id": "pds-3",
+          "title": "Linked Lists",
+          "subtopics": [
+            "Singly linked lists, doubly linked lists & circular linked lists",
+            "Insertion, deletion, reversal & pointer manipulation algorithms"
+          ],
+          "status": "pending"
+        },
+        {
+          "id": "pds-4",
+          "title": "Trees and Binary Search Trees",
+          "subtopics": [
+            "Binary tree properties, traversals (pre-order, in-order, post-order, level-order)",
+            "Binary Search Trees (BST) — insertion, deletion, search, min/max",
+            "Balanced trees & AVL tree rotations"
+          ],
+          "status": "pending"
+        },
+        {
+          "id": "pds-5",
+          "title": "Binary Heaps",
+          "subtopics": [
+            "Min-heap and max-heap properties",
+            "Heap operations: insert, delete-min/max, heapify, building a heap in linear time"
+          ],
+          "status": "pending"
+        },
+        {
+          "id": "pds-6",
+          "title": "Graphs",
+          "subtopics": [
+            "Adjacency matrix vs adjacency list representations",
+            "Graph terminology, degrees, paths & connected components"
+          ],
+          "status": "pending"
+        }
+      ]
+    },
+
+    "algorithms": {
+      "id": "gate-algorithms",
+      "name": "GATE — Algorithms",
+      "cluster": "Cluster 1: Foundations & Problem Solving",
+      "clusterNumber": 1,
+      "weightage": "8–12 Marks (High Weightage)",
+      "currentIndex": 0,
+      "topics": [
+        {
+          "id": "algo-1",
+          "title": "Asymptotic Analysis & Complexities",
+          "subtopics": [
+            "Big-O, Omega, and Theta asymptotic notations",
+            "Asymptotic worst case time and space complexity",
+            "Recurrence relation solving (Master Theorem, substitution, recursion tree)"
+          ],
+          "status": "pending"
+        },
+        {
+          "id": "algo-2",
+          "title": "Searching, Sorting, and Hashing",
+          "subtopics": [
+            "Searching (linear search, binary search)",
+            "Comparison sorting (Merge sort, Quick sort, Heap sort) & lower bound",
+            "Linear time sorting (Counting sort, Radix sort, Bucket sort)",
+            "Hashing (hash functions, collision resolution: chaining & open addressing)"
+          ],
+          "status": "pending"
+        },
+        {
+          "id": "algo-3",
+          "title": "Algorithm Design Techniques — Divide-and-Conquer",
+          "subtopics": [
+            "Divide-and-conquer principles & analysis",
+            "Matrix multiplication, finding maximum & minimum"
+          ],
+          "status": "pending"
+        },
+        {
+          "id": "algo-4",
+          "title": "Algorithm Design Techniques — Greedy",
+          "subtopics": [
+            "Greedy-choice property & optimal substructure",
+            "Activity selection, fractional knapsack, Huffman coding, job sequencing"
+          ],
+          "status": "pending"
+        },
+        {
+          "id": "algo-5",
+          "title": "Algorithm Design Techniques — Dynamic Programming",
+          "subtopics": [
+            "Overlapping subproblems & memoization/tabulation",
+            "0/1 Knapsack, Longest Common Subsequence (LCS), Matrix Chain Multiplication"
+          ],
+          "status": "pending"
+        },
+        {
+          "id": "algo-6",
+          "title": "Graph Algorithms — Traversals, MST & Shortest Paths",
+          "subtopics": [
+            "Graph traversals (Breadth-First Search BFS, Depth-First Search DFS, topological sort)",
+            "Minimum spanning trees (Kruskal's & Prim's algorithms, Disjoint Set Union-Find)",
+            "Shortest paths (Dijkstra's, Bellman-Ford, Floyd-Warshall)"
+          ],
+          "status": "pending"
+        }
+      ]
+    },
+
+    "theoryOfComputation": {
+      "id": "gate-theory-of-computation",
+      "name": "GATE — Theory of Computation",
+      "cluster": "Cluster 2: Theoretical Computer Science",
+      "clusterNumber": 2,
+      "weightage": "7–9 Marks",
+      "currentIndex": 0,
+      "topics": [
+        {
+          "id": "toc-1",
+          "title": "Regular Expressions and Finite Automata",
+          "subtopics": [
+            "Deterministic Finite Automata (DFA) & Non-Deterministic Finite Automata (NFA)",
+            "Epsilon-NFA to DFA conversion & DFA state minimization",
+            "Regular expressions, regular languages & state transition equivalence"
+          ],
+          "status": "pending"
+        },
+        {
+          "id": "toc-2",
+          "title": "Regular Languages & Pumping Lemma",
+          "subtopics": [
+            "Pumping lemma for regular languages (proving non-regularity)",
+            "Closure properties and decision properties of regular languages"
+          ],
+          "status": "pending"
+        },
+        {
+          "id": "toc-3",
+          "title": "Context-Free Grammars and Push-Down Automata",
+          "subtopics": [
+            "Context-Free Grammars (CFG), derivations, parse trees & ambiguity",
+            "Chomsky Normal Form (CNF) simplification",
+            "Deterministic PDA (DPDA) and non-deterministic PDA (NPDA)"
+          ],
+          "status": "pending"
+        },
+        {
+          "id": "toc-4",
+          "title": "Context-Free Languages & Pumping Lemma",
+          "subtopics": [
+            "Context-Free Languages (CFL) and Deterministic CFLs (DCFL)",
+            "Pumping lemma for context-free languages",
+            "Closure properties and decision properties of CFLs"
+          ],
+          "status": "pending"
+        },
+        {
+          "id": "toc-5",
+          "title": "Turing Machines and Undecidability",
+          "subtopics": [
+            "Turing machine models, multi-tape & transition configurations",
+            "Recursive (decidable) and Recursively Enumerable (Turing recognizable) languages",
+            "Undecidability, Halting problem, Post Correspondence Problem & Rice's theorem"
+          ],
+          "status": "pending"
+        }
+      ]
+    },
+
+    "compilerDesign": {
+      "id": "gate-compiler-design",
+      "name": "GATE — Compiler Design",
+      "cluster": "Cluster 2: Theoretical Computer Science",
+      "clusterNumber": 2,
+      "weightage": "4–6 Marks (High Scoring)",
+      "currentIndex": 0,
+      "topics": [
+        {
+          "id": "cd-1",
+          "title": "Lexical Analysis",
+          "subtopics": [
+            "Tokens, patterns, lexemes & lexical error handling",
+            "Regular expressions to DFA for lexical analyzer construction"
+          ],
+          "status": "pending"
+        },
+        {
+          "id": "cd-2",
+          "title": "Parsing",
+          "subtopics": [
+            "Top-down parsing (Recursive descent, LL(1) parsing, FIRST and FOLLOW sets)",
+            "Bottom-up parsing (Shift-reduce, LR(0), SLR(1), LALR(1), CLR(1) parsing tables)",
+            "Grammar conflicts & ambiguity resolution"
+          ],
+          "status": "pending"
+        },
+        {
+          "id": "cd-3",
+          "title": "Syntax-Directed Translation & Intermediate Code Generation",
+          "subtopics": [
+            "Syntax-Directed Definitions (SDD), S-attributed & L-attributed SDDs",
+            "Syntax-Directed Translation schemes (SDTS)",
+            "Intermediate code generation (Three-address code, quadruples, triples, indirect triples)"
+          ],
+          "status": "pending"
+        },
+        {
+          "id": "cd-4",
+          "title": "Runtime Environments",
+          "subtopics": [
+            "Storage organization, static vs dynamic storage allocation",
+            "Activation records, call stacks, access links & parameter passing"
+          ],
+          "status": "pending"
+        },
+        {
+          "id": "cd-5",
+          "title": "Code Optimization and Data Flow Analyses",
+          "subtopics": [
+            "Basic blocks and control flow graphs (CFG)",
+            "Local optimisation techniques (peephole optimization)",
+            "Data flow analyses: constant propagation",
+            "Data flow analyses: liveness analysis",
+            "Data flow analyses: common sub expression elimination"
+          ],
+          "status": "pending"
+        }
+      ]
+    },
+
+    "digitalLogic": {
+      "id": "gate-digital-logic",
+      "name": "GATE — Digital Logic",
+      "cluster": "Cluster 3: Systems & Architecture",
+      "clusterNumber": 3,
+      "weightage": "4–6 Marks",
+      "currentIndex": 0,
+      "topics": [
+        {
+          "id": "dl-1",
+          "title": "Number Representation and Arithmetic",
+          "subtopics": [
+            "Number systems, conversions, signed magnitude, 1's & 2's complement",
+            "Fixed and floating point number representation (IEEE 754)",
+            "Binary arithmetic, overflow detection & carry propagation"
+          ],
+          "status": "pending"
+        },
+        {
+          "id": "dl-2",
+          "title": "Boolean Algebra and Minimization",
+          "subtopics": [
+            "Boolean algebra postulates, De Morgan's laws & canonical forms (SOP/POS)",
+            "Algebraic minimization technique",
+            "Karnaugh map (K-map) minimization & don't care conditions",
+            "Tabular method (Quine-McCluskey)"
+          ],
+          "status": "pending"
+        },
+        {
+          "id": "dl-3",
+          "title": "Design of Combinational Circuits",
+          "subtopics": [
+            "Adders, subtractors, ripple carry & carry lookahead adders",
+            "Multiplexers and demultiplexers (Boolean function realization)",
+            "Encoders, priority encoders, and decoders",
+            "Magnitude comparators"
+          ],
+          "status": "pending"
+        },
+        {
+          "id": "dl-4",
+          "title": "Design of Sequential Circuits",
+          "subtopics": [
+            "Latches and flip-flops (SR, JK, D, T), excitation tables",
+            "Setup time, hold time, clock skew & timing constraints",
+            "Registers, shift registers, synchronous & asynchronous counters",
+            "Finite State Machines (Mealy and Moore models)"
+          ],
+          "status": "pending"
+        }
+      ]
+    },
+
+    "computerOrganization": {
+      "id": "gate-computer-organization",
+      "name": "GATE — Computer Organization & Architecture",
+      "cluster": "Cluster 3: Systems & Architecture",
+      "clusterNumber": 3,
+      "weightage": "6–8 Marks",
+      "currentIndex": 0,
+      "topics": [
+        {
+          "id": "coa-1",
+          "title": "Instruction Set and Addressing Modes",
+          "subtopics": [
+            "Instruction formats, RISC vs CISC concepts",
+            "Addressing modes and effective address calculations"
+          ],
+          "status": "pending"
+        },
+        {
+          "id": "coa-2",
+          "title": "Design of Arithmetic and Logic Unit (ALU)",
+          "subtopics": [
+            "ALU datapath design & operations",
+            "Integer & floating-point arithmetic hardware"
+          ],
+          "status": "pending"
+        },
+        {
+          "id": "coa-3",
+          "title": "Design of Control Unit",
+          "subtopics": [
+            "Hardwired control unit design",
+            "Microprogrammed control unit (horizontal & vertical microprogramming)"
+          ],
+          "status": "pending"
+        },
+        {
+          "id": "coa-4",
+          "title": "Memory Interfacing and Hierarchy",
+          "subtopics": [
+            "Memory interfacing & memory hierarchy performance (Average Memory Access Time)",
+            "Cache memory mapping (direct, associative, set-associative)",
+            "Cache replacement policies (LRU, FIFO) & write policies (write-through, write-back)"
+          ],
+          "status": "pending"
+        },
+        {
+          "id": "coa-5",
+          "title": "I/O Interface",
+          "subtopics": [
+            "Programmed I/O vs interrupt-driven I/O",
+            "Interrupt handling mechanism & priority",
+            "Direct Memory Access (DMA) — cycle stealing, burst mode"
+          ],
+          "status": "pending"
+        },
+        {
+          "id": "coa-6",
+          "title": "Instruction Pipelining and Hazards",
+          "subtopics": [
+            "Pipelining stages, execution speedup & throughput",
+            "Pipeline hazards (structural, data RAW/WAR/WAW, control)",
+            "Branch prediction, data forwarding & hazard mitigation"
+          ],
+          "status": "pending"
+        }
+      ]
+    },
+
+    "operatingSystems": {
+      "id": "gate-operating-systems",
+      "name": "GATE — Operating Systems",
+      "cluster": "Cluster 3: Systems & Architecture",
+      "clusterNumber": 3,
+      "weightage": "8–12 Marks (High Weightage)",
+      "currentIndex": 0,
+      "topics": [
+        {
+          "id": "os-1",
+          "title": "System Calls, Processes, and Threads",
+          "subtopics": [
+            "System calls, user mode vs kernel mode execution",
+            "Process states, Process Control Block (PCB) & context switching",
+            "Threads (user-level vs kernel-level, multithreading models)"
+          ],
+          "status": "pending"
+        },
+        {
+          "id": "os-2",
+          "title": "Inter-Process Communication, Concurrency, and Synchronization",
+          "subtopics": [
+            "Inter-process communication (shared memory & message passing)",
+            "Critical section problem, race conditions & Peterson's algorithm",
+            "Semaphores (binary/counting), mutex locks & monitors",
+            "Classical synchronization problems (Producer-Consumer, Readers-Writers, Dining Philosophers)"
+          ],
+          "status": "pending"
+        },
+        {
+          "id": "os-3",
+          "title": "Deadlock",
+          "subtopics": [
+            "Four necessary conditions for deadlock & Resource Allocation Graph (RAG)",
+            "Deadlock prevention and avoidance (Banker's algorithm)",
+            "Deadlock detection and recovery methods"
+          ],
+          "status": "pending"
+        },
+        {
+          "id": "os-4",
+          "title": "CPU and I/O Scheduling",
+          "subtopics": [
+            "Scheduling criteria & metrics (turnaround, waiting, response time)",
+            "Non-preemptive & preemptive scheduling (FCFS, SJF, SRTF, Round Robin, Priority)",
+            "Multilevel queue and feedback queue scheduling",
+            "I/O scheduling concepts"
+          ],
+          "status": "pending"
+        },
+        {
+          "id": "os-5",
+          "title": "Memory Management and Virtual Memory",
+          "subtopics": [
+            "Contiguous memory allocation, paging & segmentation",
+            "Page table structures, multi-level paging & TLB access time math",
+            "Virtual memory & demand paging",
+            "Page replacement algorithms (FIFO, LRU, Optimal), Belady's anomaly & thrashing"
+          ],
+          "status": "pending"
+        },
+        {
+          "id": "os-6",
+          "title": "File Systems",
+          "subtopics": [
+            "File concept, access methods & directory structures",
+            "File allocation methods (contiguous, linked, indexed, inode structure)",
+            "Free space management and disk block scheduling"
+          ],
+          "status": "pending"
+        }
+      ]
+    },
+
+    "databases": {
+      "id": "gate-databases",
+      "name": "GATE — Databases",
+      "cluster": "Cluster 4: Data & Networking",
+      "clusterNumber": 4,
+      "weightage": "6–8 Marks",
+      "currentIndex": 0,
+      "topics": [
+        {
+          "id": "db-1",
+          "title": "ER-Model and Relational Model",
+          "subtopics": [
+            "Entity-Relationship (ER) modeling & schema conversion",
+            "Relational model, relations, tuples & attributes",
+            "Relational algebra (select, project, join, division, set operations)",
+            "Tuple relational calculus & domain relational calculus"
+          ],
+          "status": "pending"
+        },
+        {
+          "id": "db-2",
+          "title": "SQL",
+          "subtopics": [
+            "Data Definition Language (DDL) and Data Manipulation Language (DML)",
+            "Complex SQL queries, nested subqueries, joins, aggregate functions & GROUP BY/HAVING",
+            "Views, assertions & triggers"
+          ],
+          "status": "pending"
+        },
+        {
+          "id": "db-3",
+          "title": "Integrity Constraints and Normal Forms",
+          "subtopics": [
+            "Integrity constraints (key constraints, domain constraints, referential integrity)",
+            "Functional dependencies, Armstrong's axioms & attribute closure",
+            "Normal forms: 1NF, 2NF, 3NF, and BCNF",
+            "Lossless-join decomposition and dependency preservation"
+          ],
+          "status": "pending"
+        },
+        {
+          "id": "db-4",
+          "title": "File Organization and Indexing",
+          "subtopics": [
+            "File organization (heap, sequential, hashing techniques)",
+            "Dense, sparse, primary, clustering & secondary indices",
+            "B-trees and B+ trees (structure, order, search, insertion & deletion math)"
+          ],
+          "status": "pending"
+        },
+        {
+          "id": "db-5",
+          "title": "Transactions and Concurrency Control",
+          "subtopics": [
+            "Transaction ACID properties & states",
+            "Conflict serializability and view serializability, testing via precedence graph",
+            "Recoverability, cascade-less schedules & strict schedules",
+            "Concurrency control protocols (Two-Phase Locking 2PL, Strict 2PL, Timestamp ordering)",
+            "Deadlock prevention, detection & starvation"
+          ],
+          "status": "pending"
+        }
+      ]
+    },
+
+    "computerNetworks": {
+      "id": "gate-computer-networks",
+      "name": "GATE — Computer Networks",
+      "cluster": "Cluster 4: Data & Networking",
+      "clusterNumber": 4,
+      "weightage": "7–9 Marks",
+      "currentIndex": 0,
+      "topics": [
+        {
+          "id": "cn-1",
+          "title": "Principles of Layering & Basics of Switching",
+          "subtopics": [
+            "Principles of Layering (OSI and TCP/IP architectural models)",
+            "Basics of switching (circuit switching, packet switching, virtual circuit)",
+            "Performance metrics: transmission delay, propagation delay, queuing delay, throughput & bandwidth-delay product"
+          ],
+          "status": "pending"
+        },
+        {
+          "id": "cn-2",
+          "title": "Data Link Layer & Medium Access Control",
+          "subtopics": [
+            "Framing and error detection (parity, checksum, CRC cyclic redundancy check)",
+            "Medium Access Control (ALOHA, Slotted ALOHA, CSMA, CSMA/CD minimum frame size math, CSMA/CA)",
+            "Ethernet frame structure and IEEE 802.3 standards"
+          ],
+          "status": "pending"
+        },
+        {
+          "id": "cn-3",
+          "title": "Routing",
+          "subtopics": [
+            "Distance vector routing (Bellman-Ford, count-to-infinity problem, split horizon)",
+            "Link state routing (Dijkstra's shortest path algorithm)"
+          ],
+          "status": "pending"
+        },
+        {
+          "id": "cn-4",
+          "title": "Network Layer — IPv4",
+          "subtopics": [
+            "IPv4 header structure & IPv4 fragmentation math",
+            "Classless Inter-Domain Routing (CIDR) notation, subnetting & supernetting",
+            "Network Address Translation (NAT)"
+          ],
+          "status": "pending"
+        },
+        {
+          "id": "cn-5",
+          "title": "Transport Layer — TCP & Socket API",
+          "subtopics": [
+            "TCP connection management (3-way handshake, teardown states)",
+            "TCP flow control (sliding window protocol, receiver window)",
+            "TCP congestion control (Slow Start, Congestion Avoidance, Fast Retransmit, Fast Recovery)",
+            "Socket API fundamentals"
+          ],
+          "status": "pending"
+        },
+        {
+          "id": "cn-6",
+          "title": "Application Layer Protocols — DNS and HTTP",
+          "subtopics": [
+            "DNS (Domain Name System, iterative vs recursive queries, resource record types)",
+            "HTTP (HTTP 1.0, 1.1, 2.0, persistent vs non-persistent connections, caching, request/response headers)"
+          ],
+          "status": "pending"
+        }
+      ]
+    },
+
+    "engineeringMaths": {
+      "id": "gate-engineering-maths",
+      "name": "GATE — Engineering Maths & Stats",
+      "cluster": "Cluster 5: Mathematics & Statistics",
+      "clusterNumber": 5,
+      "weightage": "6–8 Marks",
+      "currentIndex": 0,
+      "topics": [
+        {
+          "id": "em-1",
+          "title": "Linear Algebra — Matrices, Determinants & System of Linear Equations",
+          "subtopics": [
+            "Matrices, matrix operations, rank, inverse & determinants",
+            "System of linear equations & consistency",
+            "LU decomposition"
+          ],
+          "status": "pending"
+        },
+        {
+          "id": "em-2",
+          "title": "Linear Algebra — Eigenvalues and Eigenvectors",
+          "subtopics": [
+            "Characteristic equation, eigenvalues and eigenvectors",
+            "Properties of eigenvalues (symmetric, orthogonal, unitary matrices)",
+            "Cayley-Hamilton theorem & diagonalizability"
+          ],
+          "status": "pending"
+        },
+        {
+          "id": "em-3",
+          "title": "Calculus — Limits, Continuity and Differentiability",
+          "subtopics": [
+            "Limits & indeterminate forms (L'Hôpital's rule)",
+            "Continuity & differentiability tests",
+            "Mean value theorem (Rolle's, Lagrange's, Cauchy's)"
+          ],
+          "status": "pending"
+        },
+        {
+          "id": "em-4",
+          "title": "Calculus — Maxima and Minima & Integration",
+          "subtopics": [
+            "Maxima and minima (single-variable and multivariable)",
+            "Definite integrals, integration techniques & applications"
+          ],
+          "status": "pending"
+        },
+        {
+          "id": "em-5",
+          "title": "Probability — Conditional Probability & Bayes Theorem",
+          "subtopics": [
+            "Sample space, events & probability axioms",
+            "Conditional probability & Law of Total Probability",
+            "Bayes theorem & posterior probability"
+          ],
+          "status": "pending"
+        },
+        {
+          "id": "em-6",
+          "title": "Probability — Random Variables & Distributions",
+          "subtopics": [
+            "Discrete & continuous random variables, PMF, PDF, CDF",
+            "Uniform, normal (Gaussian), exponential distributions",
+            "Poisson and binomial distributions"
+          ],
+          "status": "pending"
+        },
+        {
+          "id": "em-7",
+          "title": "Statistics — Central Tendency & Dispersion",
+          "subtopics": [
+            "Mean, median, mode",
+            "Standard deviation and variance"
+          ],
+          "status": "pending"
+        }
+      ]
+    }
+  },
+
+  "aptitude": {
+    "id": "gate-general-aptitude",
+    "name": "General Aptitude (15 Marks)",
+    "weightage": "15 Marks (Fixed / High ROI)",
+    "currentIndex": 0,
+    "topics": [
+      {
+        "id": "ga-1",
+        "title": "Verbal Aptitude — Basic English Grammar",
+        "subtopics": [
+          "Tenses, verb-noun agreement, parts of speech",
+          "Articles, adjectives, prepositions and conjunctions",
+          "Common grammatical error identification & correction"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "ga-2",
+        "title": "Verbal Aptitude — Basic Vocabulary & Context",
+        "subtopics": [
+          "Words, synonyms, antonyms and contextual meaning",
+          "Idioms and phrases in sentence context",
+          "Sentence completion and cloze test practice"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "ga-3",
+        "title": "Verbal Aptitude — Reading Comprehension & Narrative Sequencing",
+        "subtopics": [
+          "Short passage critical reading and inference questions",
+          "Sentence ordering and narrative paragraph sequencing",
+          "Identifying central themes and tone"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "ga-4",
+        "title": "Quantitative Aptitude — Numerical Computation & Estimation",
+        "subtopics": [
+          "Powers, exponents, roots and logarithms",
+          "Arithmetic series, geometric series & number patterns",
+          "Estimation, speed maths & approximation techniques"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "ga-5",
+        "title": "Quantitative Aptitude — Ratios, Percentages & Commercial Maths",
+        "subtopics": [
+          "Ratios, proportions and variations",
+          "Percentages, profit, loss and discount calculations",
+          "Simple interest, compound interest, time & work, time-speed-distance"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "ga-6",
+        "title": "Quantitative Aptitude — Permutations, Combinations & Probability",
+        "subtopics": [
+          "Fundamental counting principles",
+          "Permutations (arrangements) and combinations (selections)",
+          "Elementary probability (coins, dice, cards, events)"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "ga-7",
+        "title": "Quantitative Aptitude — Data Interpretation & Mensuration",
+        "subtopics": [
+          "Bar graphs, pie charts, 2D/3D plots and tabular data",
+          "2D geometry: areas & perimeters (triangles, circles, polygons)",
+          "3D geometry: surface areas and volumes (cubes, cylinders, spheres, cones)"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "ga-8",
+        "title": "Analytical Aptitude — Logical Deduction & Induction",
+        "subtopics": [
+          "Syllogisms and Venn diagram deductions",
+          "Logical statements, assumptions, assertions and conclusions",
+          "Truth-teller, liar and deductive puzzle sets"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "ga-9",
+        "title": "Analytical Aptitude — Analogy, Relations & Series Reasoning",
+        "subtopics": [
+          "Verbal and numerical analogies",
+          "Blood relations and direction sense puzzles",
+          "Seating arrangement and alphanumeric reasoning series"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "ga-10",
+        "title": "Spatial Aptitude — Shapes, Folding & Mirror Patterns",
+        "subtopics": [
+          "2D/3D shape transformations (translation, rotation, scaling, mirroring)",
+          "Paper folding, punching, cutting and unfolding patterns",
+          "Grouping, assembling 3D blocks and pattern completion"
+        ],
+        "status": "pending"
+      }
+    ]
+  },
+
+  "ai": {
+    "id": "ai-roadmap",
+    "name": "AI Engineering Roadmap",
+    "currentIndex": 0,
+    "topics": [
+      {
+        "id": "ai-1",
+        "title": "Raw LLM API basics (Anthropic + OpenAI)",
+        "subtopics": [
+          "Request/response payload shape & headers",
+          "Streaming response handling (Server-Sent Events / SSE chunks)",
+          "Message roles: system vs user vs assistant vs tool messages"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "ai-2",
+        "title": "Structured outputs / JSON schema enforcement",
+        "subtopics": [
+          "Pydantic / Zod schema definition & JSON Schema format",
+          "Strict schema mode & schema-constrained decoding",
+          "Handling malformed or truncated responses with fallback validation"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "ai-3",
+        "title": "Function/tool calling — concepts",
+        "subtopics": [
+          "Tool definition format (name, description, parameters schema)",
+          "Model decision to invoke tool & arguments JSON parsing",
+          "Returning tool execution results & continuing conversation loop"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "ai-4",
+        "title": "Build the manual agent loop by hand (no framework)",
+        "subtopics": [
+          "Agent state & message history management",
+          "Tool execution dispatcher with error catching",
+          "Multi-turn iterative tool calling loop termination conditions"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "ai-5",
+        "title": "Embeddings — concepts & practical use",
+        "subtopics": [
+          "Embedding models & dense vector representation",
+          "Distance metrics: Cosine similarity, Dot product & Euclidean distance",
+          "Batch embedding generation & token limit chunking"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "ai-6",
+        "title": "Start Project 1: Personal Codebase Q&A Agent",
+        "subtopics": [
+          "File parsing & AST / markdown chunking strategy",
+          "Embedding codebase chunks with metadata (filepath, line numbers)",
+          "Semantic retrieval test queries & baseline accuracy"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "ai-7",
+        "title": "pgvector setup & basic vector search",
+        "subtopics": [
+          "PostgreSQL + pgvector extension installation & table schema",
+          "HNSW vs IVFFlat index creation & distance operators (<=>, <#>, <+>)",
+          "Vector similarity query execution with metadata filtering"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "ai-8",
+        "title": "Hybrid search (BM25 + vector) & Reciprocal Rank Fusion",
+        "subtopics": [
+          "Full-text search (BM25 / tsvector) setup",
+          "Dense vector semantic search setup",
+          "Reciprocal Rank Fusion (RRF) algorithm combining sparse and dense ranks"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "ai-9",
+        "title": "Reranking with a cross-encoder",
+        "subtopics": [
+          "Cross-encoder architecture vs bi-encoder embeddings",
+          "Cohere / BGE / FlashRank reranker integration",
+          "Top-K retrieval to Top-N reranked passage selection"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "ai-10",
+        "title": "RAG evaluation with RAGAS (golden set of Q&A pairs)",
+        "subtopics": [
+          "Creating golden dataset (questions, ground truth contexts & answers)",
+          "Faithfulness & Answer Relevance metrics",
+          "Context Precision & Context Recall evaluation"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "ai-11",
+        "title": "Finish Project 1 end-to-end with citations",
+        "subtopics": [
+          "Context synthesis prompt with exact source citations [file:line]",
+          "Streaming answers with inline references to UI",
+          "End-to-end latency & answer quality benchmark"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "ai-12",
+        "title": "Read: Anthropic 'Effective context engineering for AI agents'",
+        "subtopics": [
+          "Prompt caching strategies & token optimization",
+          "System prompt structure & behavioral boundary setting",
+          "Dynamic context pruning & summarization rules"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "ai-13",
+        "title": "Read: Anthropic 'Writing effective tools for AI agents'",
+        "subtopics": [
+          "Writing clear tool descriptions with usage examples",
+          "Idempotency, atomicity & parameter validation",
+          "Structured error reporting back to the agent"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "ai-14",
+        "title": "Context engineering strategies: write / select / compress / isolate",
+        "subtopics": [
+          "Scratchpad / working memory writing",
+          "Selective context retrieval & relevancy filtering",
+          "Context compression & conversation rolling window",
+          "Sub-agent isolation & task handoffs"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "ai-15",
+        "title": "MCP fundamentals — read the spec at modelcontextprotocol.io",
+        "subtopics": [
+          "MCP client-server architecture & protocol transport (stdio / SSE)",
+          "MCP primitives: Resources, Prompts, and Tools",
+          "Security model & capability negotiation"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "ai-16",
+        "title": "Build one real MCP server (read tools first)",
+        "subtopics": [
+          "Setup FastMCP / MCP SDK in Node/Python",
+          "Implement read tools (e.g. read_file, search_dir)",
+          "Test MCP server via MCP Inspector"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "ai-17",
+        "title": "Add write tools to the MCP server with access control",
+        "subtopics": [
+          "Implement write tools (edit_file, execute_query)",
+          "Path sandboxing & permission whitelist verification",
+          "Dry-run / diff preview mode"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "ai-18",
+        "title": "Connect MCP server to an agent client",
+        "subtopics": [
+          "Claude Desktop / Cursor / custom client MCP config",
+          "Dynamic tool discovery & schema registration",
+          "Executing client-side agent requests via MCP tools"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "ai-19",
+        "title": "Learn a provider Agent SDK (OpenAI Agents SDK or Claude Agent SDK)",
+        "subtopics": [
+          "Agent initialization, instructions & model config",
+          "Tool attachment & automatic execution lifecycle",
+          "Session state, thread management & handoffs"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "ai-20",
+        "title": "Learn LangGraph fundamentals (state, nodes, edges)",
+        "subtopics": [
+          "TypedDict / Pydantic AgentState definition",
+          "StateGraph, node functions & transition edges",
+          "Conditional routing edges (e.g. should_continue)"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "ai-21",
+        "title": "LangGraph checkpointing & persistence",
+        "subtopics": [
+          "MemorySaver vs PostgresSaver checkpointer",
+          "Thread-level state persistence & session resumption",
+          "Time-travel debugging & state inspection"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "ai-22",
+        "title": "Begin Project 2: define tools & risk-tier them (read vs write)",
+        "subtopics": [
+          "Architecture spec: Tier 1 (read-only), Tier 2 (reversible write), Tier 3 (destructive write)",
+          "Tool interfaces & typed input/output schemas",
+          "Sandboxed execution environment setup"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "ai-23",
+        "title": "Build the human-in-the-loop approval gate for write actions",
+        "subtopics": [
+          "LangGraph interrupt_before / interrupt_after hooks",
+          "Approval payload formatting with action preview / diff",
+          "User resume / reject / edit action feedback handling"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "ai-24",
+        "title": "Wire Project 2's agent loop in LangGraph with the MCP tool",
+        "subtopics": [
+          "Integrating MCP client tools into LangGraph node runner",
+          "State updates from tool execution outputs",
+          "Multi-step plan and execute loop"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "ai-25",
+        "title": "Add coding-agent mode: search_code, read_file, edit_file",
+        "subtopics": [
+          "Ripgrep search & regex file indexing tool",
+          "Precise line range file reader tool",
+          "Targeted string replacement & syntax checking editor tool"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "ai-26",
+        "title": "Add run_tests + git_diff to the coding-agent mode",
+        "subtopics": [
+          "Subprocess test runner with timeout & exit code capture",
+          "Git diff extraction & patch summary formatting",
+          "Feedback loop: agent fixes failing tests based on error output"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "ai-27",
+        "title": "Sandbox write operations with approval gating",
+        "subtopics": [
+          "Filesystem workspace boundary enforcement",
+          "Command execution whitelist & argument sanitization",
+          "User confirmation gate for modifying critical files"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "ai-28",
+        "title": "Model routing: cheap/fast model vs strong model by task type",
+        "subtopics": [
+          "Routing classifier (rule-based or small model router)",
+          "Fast model for planning/search, frontier model for complex code/synthesis",
+          "Cost & latency monitoring across model tiers"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "ai-29",
+        "title": "Add fallback, retries, rate limiting to model calls",
+        "subtopics": [
+          "Exponential backoff & jitter on 429/500 errors",
+          "Secondary provider fallback (OpenAI <-> Anthropic)",
+          "Token bucket rate limiting & concurrency control"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "ai-30",
+        "title": "Set up Langfuse tracing across the agent loop",
+        "subtopics": [
+          "Langfuse SDK integration with LangGraph / custom loop",
+          "Tracing LLM spans, token usage, latencies & costs",
+          "Capturing tool inputs, outputs & error traces"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "ai-31",
+        "title": "Build a small eval suite (10-20 cases): tool selection + argument accuracy",
+        "subtopics": [
+          "15 curated benchmark prompts covering all tool paths",
+          "Exact match & semantic validation for tool calls",
+          "Argument schema validation & pass/fail metric dashboard"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "ai-32",
+        "title": "Read OWASP GenAI Security Top 10 for LLM Applications",
+        "subtopics": [
+          "Prompt Injection (direct & indirect)",
+          "Sensitive Information Disclosure & Insecure Output Handling",
+          "Improper Tool Use & Excessive Agency risks"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "ai-33",
+        "title": "Learn the 'lethal trifecta' concept (Simon Willison)",
+        "subtopics": [
+          "Access to private data + untrusted input + capability to perform actions",
+          "Attack vector analysis: prompt injection via external web/email content",
+          "Defense in depth architecture against data exfiltration"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "ai-34",
+        "title": "Implement least-privilege tool scoping",
+        "subtopics": [
+          "Granular tool permissions per agent role",
+          "Read-only tokens & write-scoped API keys",
+          "Audit logging of every tool invocation"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "ai-35",
+        "title": "Write adversarial test cases (poisoned docs / malicious tool outputs)",
+        "subtopics": [
+          "Test injection payloads hidden in codebase comments/files",
+          "Malicious simulated tool responses attempting privilege escalation",
+          "Assertion that agent ignores malicious instructions and alerts user"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "ai-36",
+        "title": "Write a short threat model mapped to OWASP LLM Top 10",
+        "subtopics": [
+          "Identify trust boundaries & sensitive data assets",
+          "Threat vectors mapped to OWASP LLM 01-10",
+          "Documented mitigations implemented in Project 2"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "ai-37",
+        "title": "Dockerize Project 2 for deployment",
+        "subtopics": [
+          "Dockerfile with multi-stage build & non-root user",
+          "Docker Compose with agent service + MCP server + Postgres/pgvector",
+          "Environment variable secret management (.env.example)"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "ai-38",
+        "title": "Write the final README (architecture diagram, limitations, eval results)",
+        "subtopics": [
+          "System architecture diagram (Mermaid/ASCII)",
+          "Setup instructions, demo commands & MCP integration guide",
+          "Evaluation metrics table & security threat model summary"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "ai-39",
+        "title": "Prepare interview talking points (RAG, tool selection, MCP, evals, security)",
+        "subtopics": [
+          "RAG tradeoffs: chunking, hybrid search, reranking & RAGAS scores",
+          "Agent architecture: LangGraph state machine, MCP protocol & human-in-the-loop",
+          "Security & reliability: prompt injection defenses, eval suite & observability"
+        ],
+        "status": "pending"
+      }
+    ]
+  },
+
+  "sde": {
+    "id": "sde-interview-prep",
+    "name": "SDE Interview Prep",
+    "currentIndex": 0,
+    "topics": [
+      {
+        "id": "sde-1",
+        "title": "REST API design principles",
+        "subtopics": [
+          "HTTP methods semantics (GET, POST, PUT, PATCH, DELETE)",
+          "Status codes (2xx, 3xx, 4xx, 5xx) & idempotency",
+          "Resource-oriented URL design, pagination & API versioning"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "sde-2",
+        "title": "SQL deep dive (joins, indexing, query performance)",
+        "subtopics": [
+          "INNER, LEFT, RIGHT, FULL OUTER joins & performance",
+          "B-Tree vs Hash vs Composite indexes & index selectivity",
+          "EXPLAIN ANALYZE, query execution plans & N+1 query problem"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "sde-3",
+        "title": "NoSQL & CAP theorem",
+        "subtopics": [
+          "Consistency, Availability, Partition tolerance trade-offs",
+          "PACELC theorem (Latency vs Consistency in partitions)",
+          "Document (MongoDB) vs Key-Value (Redis) vs Columnar (Cassandra)"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "sde-4",
+        "title": "Normalization through BCNF (interview framing)",
+        "subtopics": [
+          "1NF (atomic values), 2NF (no partial dependency), 3NF (no transitive dependency)",
+          "Boyce-Codd Normal Form (BCNF) condition: X -> Y implies X is superkey",
+          "Trade-offs: Normalization vs Denormalization for read-heavy workloads"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "sde-5",
+        "title": "Caching strategies (write-through, write-back, cache-aside)",
+        "subtopics": [
+          "Cache-Aside (Lazy loading) pattern & cache miss handling",
+          "Write-Through vs Write-Back (Write-Behind) vs Write-Around",
+          "Cache invalidation, TTL, Cache Stampede & Thundering Herd solutions"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "sde-6",
+        "title": "Distributed systems basics (consistency, replication)",
+        "subtopics": [
+          "Strong vs Eventual vs Causal consistency models",
+          "Leader-Follower (Single/Multi-leader) replication & lag handling",
+          "Consensus algorithms basics (Raft / Paxos) & quorum reads/writes (R+W > N)"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "sde-7",
+        "title": "DSA pattern review — arrays & strings",
+        "subtopics": [
+          "Two Pointers & Sliding Window techniques",
+          "Prefix sums & Kadane's algorithm",
+          "Fast & slow pointers, string hashing / KMP basics"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "sde-8",
+        "title": "DSA pattern review — trees & graphs",
+        "subtopics": [
+          "Binary Tree DFS (Pre/In/Post) & BFS Level Order",
+          "Lowest Common Ancestor (LCA) & Tree Path Sums",
+          "Graph BFS/DFS, Topological Sort (Kahn's), Dijkstra & Union-Find"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "sde-9",
+        "title": "DSA pattern review — dynamic programming",
+        "subtopics": [
+          "1D DP: Fibonacci, Climbing Stairs, House Robber, LIS",
+          "2D DP / Grid: Unique Paths, Minimum Path Sum, Edit Distance",
+          "Knapsack patterns (0/1 Knapsack, Unbounded Knapsack, Coin Change)"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "sde-10",
+        "title": "CS fundamentals — DBMS revision (from master sheet)",
+        "subtopics": [
+          "ACID properties & transaction isolation levels (Dirty read, Non-repeatable read, Phantom read)",
+          "Two-Phase Locking (2PL) & Deadlock prevention",
+          "Write-Ahead Logging (WAL) & crash recovery"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "sde-11",
+        "title": "CS fundamentals — OS revision (from master sheet)",
+        "subtopics": [
+          "Process vs Thread, Context switching overhead & PCB",
+          "Virtual Memory, Paging, Page faults, TLB & Thrashing",
+          "Synchronization primitives: Mutex, Semaphore, Spinlock, Deadlock Banker's algorithm"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "sde-12",
+        "title": "CS fundamentals — CN revision (from master sheet)",
+        "subtopics": [
+          "TCP vs UDP, TCP 3-Way Handshake & 4-Way Teardown",
+          "TCP Congestion Control (Slow Start, Congestion Avoidance, Fast Recovery)",
+          "DNS lookup resolution, HTTP 1.1 vs HTTP 2 vs HTTP 3 (QUIC), TLS/HTTPS handshake"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "sde-13",
+        "title": "CS fundamentals — OOP concepts revision",
+        "subtopics": [
+          "Encapsulation, Abstraction, Inheritance, Polymorphism (compile-time vs runtime)",
+          "SOLID principles with real code examples",
+          "Design patterns: Factory, Singleton, Strategy, Observer, Decorator"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "sde-14",
+        "title": "System design — scalability basics",
+        "subtopics": [
+          "Vertical vs Horizontal scaling",
+          "Stateless application servers & session management",
+          "Database read replicas, connection pooling & async processing"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "sde-15",
+        "title": "System design — load balancing & sharding",
+        "subtopics": [
+          "Load balancer algorithms (Round Robin, Least Connections, Consistent Hashing)",
+          "L4 (Transport) vs L7 (Application) Load Balancing",
+          "Database Sharding: Range-based, Hash-based, Directory-based & re-sharding challenges"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "sde-16",
+        "title": "System design — practice: design a URL shortener",
+        "subtopics": [
+          "Functional & Non-functional requirements (read/write ratio, latency)",
+          "Shortening algorithm: Base62 encoding vs MD5/SHA-256 hash collision handling",
+          "Database schema, caching layer (Redis) & 301 vs 302 redirect trade-offs"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "sde-17",
+        "title": "System design — practice: design a rate limiter",
+        "subtopics": [
+          "Algorithms: Token Bucket, Leaky Bucket, Sliding Window Counter",
+          "Distributed Rate Limiting with Redis & Lua scripts (atomic execution)",
+          "HTTP Headers (X-Ratelimit-Limit, X-Ratelimit-Remaining, 429 Too Many Requests)"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "sde-18",
+        "title": "Defend E-Voting project technical decisions",
+        "subtopics": [
+          "Prisma / MySQL / Node.js architectural choice & type safety",
+          "JWT authentication & Role-Based Access Control (RBAC)",
+          "OTP verification via Twilio & rate limiting",
+          "Double-voting prevention via DB composite unique constraints & ACID transactions"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "sde-19",
+        "title": "Behavioral framework prep (STAR method, examples)",
+        "subtopics": [
+          "STAR method structure (Situation, Task, Action, Result)",
+          "Conflict resolution & disagreement with engineering lead story",
+          "Handling tight deadlines, production incident & technical debt trade-offs",
+          "Mentorship & driving cross-team technical initiatives"
+        ],
+        "status": "pending"
+      },
+      {
+        "id": "sde-20",
+        "title": "GenAI basics for interviews (from master sheet)",
+        "subtopics": [
+          "Transformer architecture overview (Self-attention, Multi-head attention)",
+          "RAG architecture & Vector DB retrieval mechanics",
+          "Prompt Engineering techniques (Few-shot, Chain-of-Thought, ReAct)",
+          "Fine-tuning (LoRA, QLoRA) vs RAG decision framework"
+        ],
+        "status": "pending"
+      }
+    ]
+  }
+}
